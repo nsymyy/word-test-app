@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>単語テスト作成アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- タイトル変更 -->
+  <div id="title-area" style="text-align: center; margin-bottom: 20px;">
+    <input type="text" id="test-title" placeholder="テスト名を入力" >
+    <button id="set-title-btn">テスト名変更</button>
+  </div>
+
+  <h1 id="main-title">テスト名を入力してください</h1>
+
+  <!-- 単語入力 -->
+  <div id="input-area">
+    <input type="text" id="english" placeholder="問題">
+    <input type="text" id="japanese" placeholder="解答">
+    <button id="add-btn">追加</button>
+  </div>
+
+  <!-- 単語一覧（横に列） -->
+  <table id="word-table">
+    <tbody id="word-list"></tbody>
+  </table>
+
+  <!-- ボタン -->
+  <div id="buttons">
+    <button id="print-btn">解答印刷</button>
+    <button id="test-print-btn">問題印刷</button>
+    <button id="random-btn">並び替え</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

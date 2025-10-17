@@ -1,0 +1,151 @@
+/* -------------------------- */
+/* 基本スタイル               */
+/* -------------------------- */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 40px;
+  background: #fafafa;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#title-area {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#test-title {
+  padding: 8px;
+  width: 250px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#input-area {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 16px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 80px;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+/* 削除・編集ボタン */
+.delete-column button {
+  margin: 2px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-column button:nth-child(1) {
+  background: #2196F3; /* 編集 */
+}
+
+.delete-column button:nth-child(1):hover {
+  background: #1976D2;
+}
+
+.delete-column button:nth-child(2) {
+  background: #e74c3c; /* 削除 */
+}
+
+.delete-column button:nth-child(2):hover {
+  background: #c0392b;
+}
+
+#buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#buttons button {
+  margin: 5px;
+}
+
+/* -------------------------- */
+/* 印刷用スタイル             */
+/* -------------------------- */
+@media print {
+  /* 入力フォーム・ボタン類を非表示 */
+  #input-area,
+  #buttons,
+  #title-area,
+  button {
+    display: none !important;
+  }
+
+  /* 操作列（削除・編集）を非表示 */
+  .delete-column {
+    display: none !important;
+  }
+
+  /* 背景を白にして印刷用に整える */
+  body {
+    background: white;
+    color: black;
+  }
+
+  table {
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+
+  /* 問題印刷時は解答欄を隠す */
+  body.hide-answers .answer-column {
+    visibility: hidden;
+  }
+
+  /* テーブルの罫線をくっきり */
+  th {
+    background: #f9f9f9 !important;
+  }
+}
